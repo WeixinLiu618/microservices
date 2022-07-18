@@ -109,12 +109,5 @@ public class VaccinationCenterController {
     }
 }
 
-    @HystrixCommand(fallbackMethod = "handleCitizenDownTime"): when failed, then call handleCitizenDownTime method to handle;
-    restTemplate.getForObject("http://CITIZEN-SERVICE/citizen/id/" + id, List.class);
-        CITIZEN-SERVICE is the service id we registered to Eureka.
-        If we don't user Eureka, we need use real URL where the citizen service is hosted instead of CITIZEN-SERVICE
-        the host server may change, so the url may change, we have to change the source code to give the new url
-        With Eureka, if we change the host server, there is no need to change the source code.
-            restTemplate.getForObject("http://CITIZEN-SERVICE/citizen/id/" + id, List.class); still work, no need to change.
-            loose coupling.
+  
 
