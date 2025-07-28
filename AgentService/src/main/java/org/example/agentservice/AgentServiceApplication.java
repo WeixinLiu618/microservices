@@ -1,15 +1,17 @@
-package com.codebase.microservices.CitizenService;
+package org.example.agentservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class CitizenServiceApplication {
+@EnableFeignClients
+public class AgentServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CitizenServiceApplication.class, args);
+		SpringApplication.run(AgentServiceApplication.class, args);
 	}
 
 }

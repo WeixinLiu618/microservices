@@ -20,3 +20,10 @@ spring:
           predicates:
             - Path=/vaccinationcenter/**
 
+        - id: agent-service
+          uri:
+            lb://AGENT-SERVICE
+          predicates:
+            - Path=/agent/**
+
+
